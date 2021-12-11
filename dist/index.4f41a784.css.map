@@ -1,0 +1,1 @@
+{"mappings":"AAAA;EACE;EACA;;;AAGF;EACE","sources":["index.scss"],"sourcesContent":["body {\n  margin: 0;\n  font-family: 'Poppins', sans-serif;\n}\n\nbutton {\n  font-family: 'Poppins', sans-serif;\n}\n"],"names":[],"version":3,"file":"index.4f41a784.css.map","sourceRoot":"/__parcel_source_root/"}

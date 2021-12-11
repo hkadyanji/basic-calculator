@@ -1,0 +1,21 @@
+.wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  background-color: #FFFFFF;
+  border: none;
+  &__special {
+    color: #0F94F8;
+  }
+  &__equals {
+    background-color: #0F94F8;
+    color: #FFFFFF;
+    margin: 0 1rem;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+  }
+  &__clear {
+    color: #DD774F;
+  }
+}

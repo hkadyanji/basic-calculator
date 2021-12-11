@@ -1,0 +1,31 @@
+.panel {
+  display: flex;
+  justify-content: center;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100vh;
+  width: 100%;
+  max-width: 480px;
+  position: relative;
+}
+
+.wrapper {
+  display: inline-grid;
+  grid-template-rows: repeat(4, 6rem);
+  grid-template-columns: repeat(4, 1fr);
+  padding: 1rem;
+}
+
+.heading {
+  display: flex;
+  justify-content: center;
+  font-weight: bold;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  color: #FFFFFF;
+}
