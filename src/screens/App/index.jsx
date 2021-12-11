@@ -38,7 +38,7 @@ const App = () => {
           .replaceAll('X', '*');
 
         setResult(currExpression);
-        setCurrExpression(`${eval(expr)}`);
+        setCurrExpression(`${+(eval(expr).toFixed(4))}`);
         break;
       case '()':
         const val = handleBrackets();

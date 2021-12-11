@@ -22790,7 +22790,7 @@ const App = ()=>{
             case '=':
                 const expr = currExpression.replaceAll('\u00F7', '/').replaceAll('X', '*');
                 setResult(currExpression);
-                setCurrExpression(`${eval(expr)}`);
+                setCurrExpression(`${+eval(expr).toFixed(4)}`);
                 break;
             case '()':
                 const val = handleBrackets();
@@ -22880,11 +22880,11 @@ $RefreshReg$(_c, "App");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-runtime":"6Ds2u","react":"4mchR","../../components/Btn":"jK356","@parcel/transformer-js/src/esmodule-helpers.js":"ciiiV","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"9pz13","../../components/Display":"kUDA8","./index.module.scss":"bGlnd"}],"jK356":[function(require,module,exports) {
-var $parcel$ReactRefreshHelpers$a956 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+},{"react/jsx-runtime":"6Ds2u","react":"4mchR","../../components/Display":"kUDA8","../../components/Btn":"jK356","./index.module.scss":"bGlnd","@parcel/transformer-js/src/esmodule-helpers.js":"ciiiV","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"9pz13"}],"kUDA8":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$6998 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
-$parcel$ReactRefreshHelpers$a956.prelude(module);
+$parcel$ReactRefreshHelpers$6998.prelude(module);
 
 try {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
@@ -22894,52 +22894,56 @@ var _react = require("react");
 var _reactDefault = parcelHelpers.interopDefault(_react);
 var _indexModuleScss = require("./index.module.scss");
 var _indexModuleScssDefault = parcelHelpers.interopDefault(_indexModuleScss);
-const Btn = (props)=>{
+const Display = (props)=>{
     // props
-    const { onClick , value  } = props;
-    // handlers
-    const getStyle = ()=>{
-        if (value === '=') return _indexModuleScssDefault.default.wrapper__equals;
-        if (value === 'C') return _indexModuleScssDefault.default.wrapper__clear;
-        if ([
-            '()',
-            '%',
-            '\u00F7',
-            '+',
-            'X',
-            '-'
-        ].includes(value)) return _indexModuleScssDefault.default.wrapper__special;
-        return '';
-    };
+    const { value , subValue  } = props;
     // render
-    return(/*#__PURE__*/ _jsxRuntime.jsx("button", {
-        className: `${_indexModuleScssDefault.default.wrapper} ${getStyle()}`,
-        onClick: ()=>onClick(value)
-        ,
+    return(/*#__PURE__*/ _jsxRuntime.jsxs("div", {
+        className: _indexModuleScssDefault.default.display,
         __source: {
-            fileName: "src/components/Btn/index.jsx",
-            lineNumber: 28,
+            fileName: "src/components/Display/index.jsx",
+            lineNumber: 11,
             columnNumber: 5
         },
         __self: undefined,
-        children: value
+        children: [
+            /*#__PURE__*/ _jsxRuntime.jsx("div", {
+                className: _indexModuleScssDefault.default.subValue,
+                __source: {
+                    fileName: "src/components/Display/index.jsx",
+                    lineNumber: 12,
+                    columnNumber: 7
+                },
+                __self: undefined,
+                children: subValue
+            }),
+            /*#__PURE__*/ _jsxRuntime.jsx("div", {
+                className: _indexModuleScssDefault.default.value,
+                __source: {
+                    fileName: "src/components/Display/index.jsx",
+                    lineNumber: 13,
+                    columnNumber: 7
+                },
+                __self: undefined,
+                children: value || 0
+            })
+        ]
     }));
 };
-_c = Btn;
-exports.default = Btn;
+_c = Display;
+exports.default = Display;
 var _c;
-$RefreshReg$(_c, "Btn");
+$RefreshReg$(_c, "Display");
 
-  $parcel$ReactRefreshHelpers$a956.postlude(module);
+  $parcel$ReactRefreshHelpers$6998.postlude(module);
 } finally {
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-runtime":"6Ds2u","react":"4mchR","./index.module.scss":"WDCDD","@parcel/transformer-js/src/esmodule-helpers.js":"ciiiV","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"9pz13"}],"WDCDD":[function(require,module,exports) {
-module.exports["wrapper"] = "_wrapper_632754";
-module.exports["wrapper__special"] = "_wrapper__special_632754";
-module.exports["wrapper__equals"] = "_wrapper__equals_632754";
-module.exports["wrapper__clear"] = "_wrapper__clear_632754";
+},{"react/jsx-runtime":"6Ds2u","react":"4mchR","./index.module.scss":"6w5j5","@parcel/transformer-js/src/esmodule-helpers.js":"ciiiV","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"9pz13"}],"6w5j5":[function(require,module,exports) {
+module.exports["display"] = "_display_ca6849";
+module.exports["subValue"] = "_subValue_ca6849";
+module.exports["value"] = "_value_ca6849";
 
 },{}],"ciiiV":[function(require,module,exports) {
 exports.interopDefault = function(a) {
@@ -23091,11 +23095,11 @@ function registerExportsForReactRefresh(module) {
     }
 }
 
-},{"react-refresh/runtime":"aeH4U"}],"kUDA8":[function(require,module,exports) {
-var $parcel$ReactRefreshHelpers$6998 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+},{"react-refresh/runtime":"aeH4U"}],"jK356":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$a956 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
-$parcel$ReactRefreshHelpers$6998.prelude(module);
+$parcel$ReactRefreshHelpers$a956.prelude(module);
 
 try {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
@@ -23105,56 +23109,52 @@ var _react = require("react");
 var _reactDefault = parcelHelpers.interopDefault(_react);
 var _indexModuleScss = require("./index.module.scss");
 var _indexModuleScssDefault = parcelHelpers.interopDefault(_indexModuleScss);
-const Display = (props)=>{
+const Btn = (props)=>{
     // props
-    const { value , subValue  } = props;
+    const { onClick , value  } = props;
+    // handlers
+    const getStyle = ()=>{
+        if (value === '=') return _indexModuleScssDefault.default.wrapper__equals;
+        if (value === 'C') return _indexModuleScssDefault.default.wrapper__clear;
+        if ([
+            '()',
+            '%',
+            '\u00F7',
+            '+',
+            'X',
+            '-'
+        ].includes(value)) return _indexModuleScssDefault.default.wrapper__special;
+        return '';
+    };
     // render
-    return(/*#__PURE__*/ _jsxRuntime.jsxs("div", {
-        className: _indexModuleScssDefault.default.display,
+    return(/*#__PURE__*/ _jsxRuntime.jsx("button", {
+        className: `${_indexModuleScssDefault.default.wrapper} ${getStyle()}`,
+        onClick: ()=>onClick(value)
+        ,
         __source: {
-            fileName: "src/components/Display/index.jsx",
-            lineNumber: 11,
+            fileName: "src/components/Btn/index.jsx",
+            lineNumber: 28,
             columnNumber: 5
         },
         __self: undefined,
-        children: [
-            /*#__PURE__*/ _jsxRuntime.jsx("div", {
-                className: _indexModuleScssDefault.default.subValue,
-                __source: {
-                    fileName: "src/components/Display/index.jsx",
-                    lineNumber: 12,
-                    columnNumber: 7
-                },
-                __self: undefined,
-                children: subValue
-            }),
-            /*#__PURE__*/ _jsxRuntime.jsx("div", {
-                className: _indexModuleScssDefault.default.value,
-                __source: {
-                    fileName: "src/components/Display/index.jsx",
-                    lineNumber: 13,
-                    columnNumber: 7
-                },
-                __self: undefined,
-                children: value || 0
-            })
-        ]
+        children: value
     }));
 };
-_c = Display;
-exports.default = Display;
+_c = Btn;
+exports.default = Btn;
 var _c;
-$RefreshReg$(_c, "Display");
+$RefreshReg$(_c, "Btn");
 
-  $parcel$ReactRefreshHelpers$6998.postlude(module);
+  $parcel$ReactRefreshHelpers$a956.postlude(module);
 } finally {
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-runtime":"6Ds2u","react":"4mchR","./index.module.scss":"6w5j5","@parcel/transformer-js/src/esmodule-helpers.js":"ciiiV","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"9pz13"}],"6w5j5":[function(require,module,exports) {
-module.exports["display"] = "_display_ca6849";
-module.exports["subValue"] = "_subValue_ca6849";
-module.exports["value"] = "_value_ca6849";
+},{"react/jsx-runtime":"6Ds2u","react":"4mchR","./index.module.scss":"WDCDD","@parcel/transformer-js/src/esmodule-helpers.js":"ciiiV","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"9pz13"}],"WDCDD":[function(require,module,exports) {
+module.exports["wrapper"] = "_wrapper_632754";
+module.exports["wrapper__special"] = "_wrapper__special_632754";
+module.exports["wrapper__equals"] = "_wrapper__equals_632754";
+module.exports["wrapper__clear"] = "_wrapper__clear_632754";
 
 },{}],"bGlnd":[function(require,module,exports) {
 module.exports["panel"] = "_panel_4aa227";
